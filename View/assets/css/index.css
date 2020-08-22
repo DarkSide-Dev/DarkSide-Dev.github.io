@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    display: flex;
+
+    background-color: #D3EBFB;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+#menu{
+
+    width: 100vw;
+
+    height: 80px;
+
+}
+
+.menu-itens{
+
+    display: flex;
+
+    list-style: none;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+}
+
+.menu-itens li{
+
+    background-color: #062346;
+
+    color: whitesmoke;
+
+    display: flex;
+
+    flex: 2;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 80px;
+
+    font-family: 'Sura', serif;
+
+    font-size: x-large;
+
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.menu-itens li:nth-child(1){
+
+    flex: 2.3;
+
+}
+
+.menu-itens li:nth-child(4){
+
+    border-right: 1px solid whitesmoke;
+    
+}
+
+.menu-itens li:nth-last-child(1){
+
+    flex: 0.5;
+
+}
+
+.menu-itens li:nth-last-child(2){
+
+    flex: 0.5;
+
+}
+
+.menu-itens li:nth-last-child(3){
+
+    flex: 0.5;
+
+}
+
+.menu-itens li:nth-last-child(4){
+
+    flex: 0.5;
+
+}
+
+.menu-itens li img{
+
+    width: 60px;
+
+    padding:10px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.menu-itens li img:nth-child(1):hover{
+
+    background-color: #D3EBFB;
+}
+
+#logo{
+
+    font-family: 'Saira', sans-serif;
+
+    font-size: 50px;
+
+    color: #D3EBFB;
+
+}
+
+.pesquisa{
+
+    background-color: lightslategrey;
+
+    width: 80vw;
+
+    height: 500px;
+
+}
+
+#pesquisador{
+
+    width: 200px;
+
+    height: 30px;
+
+    font: larger;
+
+    margin-right: 10px;
+
+    margin-left: 20px;
+
+    margin-bottom: 5px;
+
+    border: 0;
+
+}
+
+#lupa{
+
+    position: absolute;
+
+    width: 45px;
+
+    right: 0;
+
+}
+
+.cor{
+    color: blue;
+}
+
+.itens:hover{
+
+    background-color: #073265;
+
+    cursor: pointer;
+
+}
