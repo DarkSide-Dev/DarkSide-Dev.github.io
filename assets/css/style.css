@@ -46,11 +46,11 @@ section{
     font-size: 27px;
     font-family: monospace;
     color: rgb(18, 28, 33);
+    text-align: center;
 }
 
 .area_img{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .area_img img {
@@ -66,7 +66,7 @@ section{
 }
 
 .area_desc{
-    width: 600px;
+    width: auto;
 }
 
 .area_desc p{
@@ -109,4 +109,13 @@ section{
     -moz-transition: 0.5s ease background-color;
     -ms-transition: 0.5s ease background-color;
     -o-transition: 0.5s ease background-color;
+}
+
+@media screen and (max-width: 800px) {
+  
+    section{
+        width: 100%;
+        margin: 5px;
+    }
+
 }
