@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    background-color: #cdd8dd;
+}
+
+main{
+    background-image: url("../img/Dark-Side-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section{
+    width: 45%;
+    height: auto;
+    margin: 20px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: rgba(207, 207, 207, 0.85);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.area_title{
+    margin: 15px 0px;
+}
+
+.area_title h1{
+    font-size: 27px;
+    font-family: monospace;
+    color: rgb(18, 28, 33);
+}
+
+.area_img{
+    display: flex;
+    justify-content: center;
+}
+
+.area_img img {
+    text-align: center;
+    width: 90%;
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.area_desc{
+    width: 600px;
+}
+
+.area_desc p{
+    font-family: monospace;
+    font-size: 20px;
+    padding: 15px 40px 0px 40px;
+    text-align: center;
+    color:  rgb(18, 28, 33);
+    line-height: 30px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.link a:hover{
+    background-color: red;
+}
+
+.link a{
+    font-family: monospace;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(18, 28, 33);
+    background-color: #f32e2e;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s ease background-color;
+    -webkit-transition: 0.5s ease background-color;
+    -moz-transition: 0.5s ease background-color;
+    -ms-transition: 0.5s ease background-color;
+    -o-transition: 0.5s ease background-color;
+}

@@ -1,0 +1,823 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+
+header{
+    background-color: #9d52ff;
+    display: flex;
+    height: 70px;
+    z-index: 9;
+    transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+}
+
+nav{
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+}
+
+nav ul li{
+    flex:0.6;
+    font-weight: 600;
+}
+
+nav ul li:nth-child(1){
+    flex:2;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: -10px;
+}
+
+nav ul li:nth-child(6){
+    flex:1.5;
+    text-align: left;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav ul li img{
+    height: 30px;  
+}
+
+#btnContact{
+    border: 2px solid white;
+    padding: 5px 15px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+}
+
+#menu{
+    display: none;
+    width: 35px;
+}
+
+/* Header */
+
+/* Banner */
+
+.banner_area{
+    position: relative;
+    margin-bottom: -10px;
+}
+
+#banner{
+    width: 100%;
+}
+
+.banner_area span{
+    color: darkgrey;
+    position: absolute;
+    left: 18%;
+    top:70px;
+    font-size: 14px;
+}
+
+.banner_legend{
+    height: auto;
+    background-color: #eeeef0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_legend span{
+    position: relative;
+    font-size: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #9d52ff;
+}
+
+.area_40{
+    text-align: center;
+    padding-top: 30px;
+}
+
+#porc{
+    font-size: 45px;
+    position: absolute;
+    top: 55px;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 20px;
+    width: 30%;
+    color: #728692;
+    text-align: justify;
+}
+
+.image img {
+    padding-top: 15px;
+    height: 75px;
+    padding-bottom: 80px;
+}
+
+/* Banner */
+
+/* Contact Area */
+
+.contact_area{
+    background-color: #7f59e9;
+    padding-bottom: 30px;
+}
+
+.links{
+    color: #FFF;
+    padding-bottom: 30px;
+    margin-right: 450px;
+}
+
+.links ul{
+    list-style: none;
+}
+
+.links ul li:nth-child(1){
+    padding-top: 30px;
+}
+
+.links ul li:nth-child(5){
+    padding-bottom: 30px;
+}
+
+.links ul li{
+    padding-top: 15px;
+}
+.email span{
+    font-weight: bold;
+}
+
+#input_mail{
+    background-color: #7f59e9;
+    border: 0;
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+    width: 300px;
+    color: white;
+}
+
+#input_mail::placeholder{
+    color: white;
+}
+
+input[type="submit"]{
+    width: 100px;
+    border:0;
+    padding: 2px 5px 2px 5px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color: white;
+    background-color: #4fb8f9;
+}
+
+.areas{
+    display: flex;
+    position: relative;
+}
+
+.send_message{
+    position: absolute;
+    width: 600px;
+    height: 370px;
+    display: flex;
+    background-color: white;
+    border: 1px solid lightgray;
+    flex-direction: row;
+    box-shadow: 0px 0px 20px rgb(168, 163, 163);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    right: 0px;
+    top: -50px;
+}
+
+.area_message{
+    color: #7f59e9;
+    padding:10px;
+}
+
+.area_message h1{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.area_message p{
+    color: grey;
+    padding: 5px 20px;
+}
+
+.area_message span{
+    color: black;
+}
+
+.inputs_block{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs_block input{
+    margin-top: 40px;
+    margin-right: 30px;
+    border: 0;
+    padding-bottom: 3px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+    width: 300px;
+    color: black;
+}
+
+#sendMessage{
+    background-color: #7f59e9;
+    color: white;
+    width: 150px;
+    padding: 10px;
+}
+
+/* Contact Area */
+
+/* Meth */
+
+.meth_area{
+    background-color: #eeeef0;
+}
+
+.container .area_titulo{
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.container .area_titulo span{
+    color: #7f59e9;
+}
+
+.meth_info{
+    display: flex;
+}
+
+.meth_info article{
+    padding: 0px 60px 0px 30px;
+    flex: 1;
+}
+
+.meth_info article:nth-child(1){
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+.meth_info article:nth-child(4){
+    padding-right: 100px;
+    padding-left: 40px;
+}
+
+.meth_info article h2{
+    font-size: 18px;
+}
+
+.meth_info article p{
+    color: #8c979f;
+}
+
+.meth_info article ul{
+    list-style-position: outside;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.meth_info article ul li{
+    color: #8c979f;
+}
+
+/* Meth */
+
+/* Price */
+
+.price_area{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price_area h1{
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.price_area h1 span{
+    color: #9d52ff;
+}
+
+.price_area ul{
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.price_area hr{
+    width: 25%;
+    border: 1.5px solid lightgrey;
+    text-align: center;
+}
+
+.price_area ul li:before {
+    content: "✓"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: #9d52ff; /* Or a color you prefer */
+    font-weight: bold;
+}
+
+.price_area p{
+    color: #9d52ff;
+    font-weight: bold;
+    font-size: 50px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.price_area p span:nth-child(1){
+    font-size: 22px;
+    color: black;
+    position: relative;
+    bottom: 7px;
+}
+
+.price_area p span:nth-child(2){
+    font-size: 35px;
+    position: relative;
+    bottom: 7px;
+}
+
+.price_area small{
+    color: grey;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    padding-bottom: 150px;
+}
+
+/* Price */
+
+/* Footer */
+
+footer p{
+    color:#7f59e9;
+    font-weight: bold;
+    padding-top: 50px;
+    text-align: center;
+}
+
+footer .area_images{
+    display: flex;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+footer .area_images img{
+    height: 65px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 60px;
+}
+
+/* Footer */
+
+@media (max-width: 1064px){
+    /* Header */
+    header{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .show{
+        left: 0;
+    }
+
+    .hide{
+        left:-100%;
+    }
+
+    nav{
+        height: 100%;
+    }
+
+    nav ul{
+        flex-direction: column;
+        flex: 1;
+    }
+
+    nav ul li{
+        padding: 10px 0px;
+        font-size: 20px;
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li img{
+        height: 50px;  
+    }
+
+    nav ul li:nth-child(6){
+        flex:1.5;
+        text-align: center;
+    }
+
+    #btnContact{
+        border: 0;
+    }
+
+    #menu{
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        z-index: 10;
+        transition: 0.5 ease all;
+        -webkit-transition: 0.5 ease all;
+        -moz-transition: 0.5 ease all;
+        -ms-transition: 0.5 ease all;
+        -o-transition: 0.5 ease all;
+    }
+
+    /* Header */
+
+    /* Banner */
+
+    .banner_area{
+        position: relative;
+        margin-bottom: -10px;
+    }
+
+    #banner{
+        width: 100%;
+    }
+
+    .banner_area span{
+        /* color: darkgrey;
+        position: absolute;
+        left: 18%;
+        top:70px;
+        font-size: 14px; */
+        display: none;
+    }
+
+    .banner_legend{
+        height: auto;
+        background-color: #f3f3f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner_legend span{
+        position: relative;
+        font-size: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #9d52ff;
+    }
+
+    .area_40{
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #porc{
+        font-size: 25px;
+        position: absolute;
+        top: 25px;
+        font-weight: bold;
+    }
+
+    .subtitle{
+        font-size: 20px;
+        width: 90%;
+        color: #728692;
+        text-align: center;
+    }
+
+    .image img {
+        padding-top: 15px;
+        height: 75px;
+        padding-bottom: 80px;
+    }
+
+    /* Banner */
+
+    /* Meth */
+
+    .meth_area{
+        background-color: #eeeef0;
+    }
+
+    .container .area_titulo{
+        font-size: 35px;
+        font-weight: bold;
+        padding-top: 70px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    .container .area_titulo span{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .area_titulo h3{
+        color:#9d52ff;
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .meth_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .meth_info article{
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .meth_info article p{
+        padding: 0px;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 60px;
+        padding-top: 20px;
+    }
+
+    .meth_info article img{
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    .meth_info article:nth-child(1){
+        padding: 0px;
+    }
+
+    .meth_info article:nth-child(2){
+        padding: 0px;
+    }
+
+    .meth_info article:nth-child(3){
+        padding: 0px;
+    }
+
+    .meth_info article:nth-child(4){
+        padding: 0px;
+    }
+
+    .meth_info article h2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Meth */
+
+    /* Contact Area */
+
+    .contact_area{
+        background-color: #7f59e9;
+    }
+
+    .links{
+        color: #FFF;
+        padding-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .links ul{
+        list-style: none;
+    }
+
+    .links ul li:nth-child(1){
+        padding-top: 30px;
+    }
+
+    .links ul li:nth-child(5){
+        padding-bottom: 30px;
+    }
+
+    .links ul li{
+        padding-top: 15px;
+    }
+    .email span{
+        font-weight: bold;
+    }
+
+    .email{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #input_mail{
+        background-color: #7f59e9;
+        border: 0;
+        padding-bottom: 3px;
+        border-bottom: 2px solid white;
+        margin-bottom: 30px;
+        width: auto;
+        color: white;
+    }
+
+    #input_mail::placeholder{
+        color: white;
+    }
+
+    input[type="submit"]{
+        width: auto;
+        border:0;
+        padding: 2px 0px 2px 0px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        color: white;
+        background-color: #4fb8f9;
+    }
+
+    .areas{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .send_message{
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        background-color: white;
+        border: 1px solid lightgray;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px rgb(168, 163, 163);
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        right: 0;
+        top: 0;
+    }
+
+    .area_message{
+        color: #7f59e9;
+        padding:10px 0px 10px 0px;
+    }
+
+    .area_message h1{
+        font-size: 25px;
+    }
+
+    .area_message p{
+        color: grey;
+        padding: 20px 0px 20px 0px;
+        text-align: center;
+    }
+
+    .area_message span{
+        color: black;
+    }
+
+    .inputs_block{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputs_block input{
+        justify-self: center;
+        align-self: center;
+        margin-top: 40px;
+        margin-right: 0;
+        border: 0;
+        padding-bottom: 3px;
+        border-bottom: 2px solid grey;
+        margin-bottom: 10px;
+        width: auto;
+        color: black;
+    }
+
+    #sendMessage{
+        background-color: #7f59e9;
+        color: white;
+        width: 150px;
+        padding: 10px;
+    }
+
+    /* Contact Area */
+
+    /* Price */
+
+    .price_area{
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .price_area h1{
+        color: black;
+        padding-bottom: 20px;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .price_area h1 span{
+        color: #9d52ff;
+    }
+
+    .price_area ul{
+        list-style: none;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .price_area hr{
+        width: 100%;
+        border: 1.5px solid lightgrey;
+        text-align: center;
+    }
+
+    .price_area ul li:before {
+        content: "✓"; /* Insert content that looks like bullets */
+        padding-right: 8px;
+        color: #9d52ff; /* Or a color you prefer */
+        font-weight: bold;
+    }
+
+    .price_area p{
+        color: #9d52ff;
+        font-weight: bold;
+        font-size: 50px;
+        position: relative;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .price_area p span:nth-child(1){
+        font-size: 22px;
+        color: black;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .price_area p span:nth-child(2){
+        font-size: 35px;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .price_area small{
+        color: grey;
+        position: relative;
+        bottom: 10px;
+        left: 10px;
+        padding-bottom: 40px;
+    }
+
+    /* Price */
+
+}
