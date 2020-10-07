@@ -119,3 +119,11 @@ section{
     }
 
 }
+
+@media screen and (max-width: 425px) {
+  
+    .area_img img {
+        height: 180px;
+    }
+
+}

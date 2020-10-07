@@ -1,0 +1,59 @@
+body{
+    background-color: cornflowerblue;
+}
+
+main{
+    transition: all ease .7s;
+    -webkit-transition: all ease .7s;
+    -moz-transition: all ease .7s;
+    -ms-transition: all ease .7s;
+    -o-transition: all ease .7s;
+    position: relative;
+    background-color: #557fcc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    height: 100px;
+}
+
+h1{
+    cursor: pointer;
+    z-index: 999;
+    margin-top: 0;
+}
+
+h1 span{
+    z-index: 999;
+}
+
+.bola{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
