@@ -111,6 +111,52 @@ section{
     -o-transition: 0.5s ease background-color;
 }
 
+footer{
+    background: linear-gradient(180deg,  #2c363b,  #1d2327, #121c21);
+    height: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    padding-top: 0px;
+    flex-direction: column;
+}
+
+footer h3{
+    margin: 0px;
+    color: #af353f;
+}
+
+footer h5{
+    margin: 0px;
+    color: #af1320;
+}
+
+.social{
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}
+
+#js-top{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+#js-top img{
+    width: 25px;
+}
+
+footer a{
+    color: #f32e2e;
+    text-decoration: none;
+}
+
+footer img{
+    width: 40px;
+}
+
 @media screen and (max-width: 800px) {
   
     section{
