@@ -112,7 +112,7 @@ section{
 }
 
 footer{
-    background: linear-gradient(180deg,  #2c363b,  #1d2327, #121c21);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.705),  #2c363b,  #262d31, #121c21);
     height: 170px;
     display: flex;
     justify-content: space-evenly;
