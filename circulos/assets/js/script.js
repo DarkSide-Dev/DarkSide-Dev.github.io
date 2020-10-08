@@ -1,4 +1,5 @@
 let lvl = 1;
+let time = 17 - lvl * 2;
 
 function Click(number){
     let x = document.getElementById(number);
@@ -6,13 +7,24 @@ function Click(number){
     x.classList.add("green");
     x.removeAttribute("onclick");
 
+    let bar = document.getElementById("ranger");
+
+    if(bar.value >= 9.5){
+
+        bar.classList.remove("inProgress");
+        time = 0;
+
+    }
+
+    bar.value += 0.5;
+
     let date = new Date();
 
     let ball = document.querySelector("main");
 
     let id = Math.floor((Math.random() * 2000) + 1) + "+" + date.getMilliseconds() + "-" + date.getSeconds();
 
-    ball.innerHTML += `<div class="bola red" id="${id}" onclick="Click('${id}')" style="bottom:${Math.floor((Math.random() * 90) + 1)}%;left:${Math.floor((Math.random() * 90) + 1)}%"></div>`;
+    ball.innerHTML += `<div class="bola red" id="${id}" onclick="Click('${id}')" style="bottom:${Math.floor((Math.random() * 90) + 1)}%;left:${Math.floor((Math.random() * 80) + 1)}%"></div>`;
 }
 
 function SemiStart(){
@@ -21,11 +33,11 @@ function SemiStart(){
 
     let clock = document.getElementById("timer");
 
-    document.querySelector("header").removeAttribute("onclick");
+    document.querySelector("h1").removeAttribute("onclick");
 
     let main = document.querySelector("main");
 
-    main.style.height = screen.height - 110 + "px";
+    main.style.height = screen.height - 117 + "px";
 
     let timer = setInterval(() => {
         
@@ -48,8 +60,6 @@ function SemiStart(){
 
 function Start(){
 
-    let time = 17 - lvl * 2;
-
     let clock = document.getElementById("timer");
 
     let ball = document.querySelector("main");
@@ -64,21 +74,46 @@ function Start(){
 
             clearInterval(timer);
 
-            let x = document.querySelectorAll(".green");
+            let bar = document.getElementById("ranger");
 
-            clock.innerHTML = `Parabéns, você marcou ${x.length} pontos!!`;
+            if(bar.value == 10){
 
-            ball.style.opacity = "0";
+                clock.innerHTML = `Parabéns, encheu a barra de progresso!!`;
 
-            setTimeout(() => {
+                ball.style.opacity = "0";
 
-                ball.innerHTML = "";
-                ball.style.opacity = "1";
+                setTimeout(() => {
 
-                document.querySelector("header").setAttribute("onclick", "SemiStart()");
-                clock.innerHTML = "Clique aqui para começar";
+                    ball.innerHTML = "";
+                    ball.style.opacity = "1";
 
-            }, 4000);
+                    document.querySelector("h1").setAttribute("onclick", "SemiStart()");
+                    clock.innerHTML = "Clique aqui para jogar novamente";
+                    bar.value = 0;
+
+                }, 5000);
+
+            }
+            else{
+
+                clock.innerHTML = `Você conseguiu ${bar.value * 10}%, tente novamente!!`;
+
+                ball.style.opacity = "0";
+
+                setTimeout(() => {
+
+                    ball.innerHTML = "";
+                    ball.style.opacity = "1";
+
+                    document.querySelector("h1").setAttribute("onclick", "SemiStart()");
+                    clock.innerHTML = "Clique aqui para jogar novamente";
+                    bar.value = 0;
+
+                }, 5000);
+
+            }
+
+            time = 17;
 
         }else{
 
