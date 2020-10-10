@@ -3,60 +3,138 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DarkSide Developer</title>
+        <title>Darkside Developer</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
+        <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
         <meta name="description" content="Portfólio de uma boa parte dos projetos pessoais e comerciais do DarkSide Developer">
         <meta name="keywords" content="HTML, CSS3, Portfolio, Web Development, Programação, DarkSide, Darkside Developer, Darkside Programmer">
     </head>
 
-    <body>
+    <body onload="Wait()">
         
-        <main>
+        <main id="intro">
 
-            <section>
+            <div class="container demo">
 
-                <div class="area_title">
-                    <h1>Pizzaria (Projeto Pessoal)</h1>
-                </div>
+                <div class="content">
 
-                <div class="area_center">
+                   <div id="large-header" class="large-header">
 
-                    <div class="area_img">
+                      <canvas id="demo-canvas"></canvas>
 
-                        <img src="assets/img/pizza.png" alt="Thumbnail">
+                        <div class="intro main-title">
 
-                    </div>
+                            <div class="intro-title">
+        
+                                <h1 id="Text1"></h1>
+                                <h2 id="Text2"></h2>
 
-                    <div class="area_desc">
-
-                        <p>Site desenvolvido focando no JS, foi uma primeira introdução ao funcionamento dessa tecnologia.</p>
-
-                    </div>
-
-                    <div class="link">
-
-                        <a href="pizza/">Acessar</a>
-
-                    </div>
-
-                </div>
+                                <div class="intro_button">
+                                    <small></small>
+                                <button onclick="Goinit()">VER PORTFÓLIO</button>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                        <div class="intro_images">
             
-            </section>
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/mysql.png" title="MYSQL" alt="Mysql">
+                            </div>
 
-            <section>
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/php.png" title="PHP" alt="php">
+                            </div>
 
-                <div class="area_title">
-                    <h1>Medicenter (Projeto Pessoal)</h1>
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/react.png" title="REACT & REACT NATIVE" alt="react">
+                            </div> 
+
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/firebase.png" title="FIREBASE" alt="firebase">
+                            </div>                            
+            
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/html.png" title="HTML5" alt="html">
+                            </div>
+            
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/css.png" title="CSS3" alt="css">
+                            </div>
+            
+                            <div class="special_image" style="opacity: 0;">
+                                <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                            </div>                           
+            
+                        </div>
+
+                   </div>
+
                 </div>
 
+             </div>
+
+        </main>
+
+        <div class="bio">
+
+            <h1 id="bio_title">INFORMAÇÕES</h1>
+
+            <hr>
+
+            <br> <br>
+
+            <div class="area_bio">
+
+                <div class="bio_info">
+
+                    <h1>Sobre mim</h1>
+
+                    <p>Olá, meu nome é João, tenho 17 anos e sou um desenvolvedor. Sou formado em técnico em Desenvolvimento de Sistemas, com bom conhecimento em construção de Websites, Aplicativos Mobile e Administração de Equipes.</p>
+
+                </div>
+
+                <div class="bio_image">
+
+                    <figure>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="portfolio">
+
+            <h1 id="port_title">PORTFÓLIO</h1>
+
+            <section style="border-top: 2px solid grey;">
+
                 <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Medicenter (Projeto Pessoal)</h1>
+                    </div>
 
                     <div class="area_img">
 
                         <img src="assets/img/medicenter.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">    
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -71,22 +149,71 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
             <section>
 
-                <div class="area_title">
-                    <h1>VD Negócios (Projeto Comercial)</h1>
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Loja de Roupa (Projeto Pessoal)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/copysite.png" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">                            
+                        </div>
+
+                    </div>
+
                 </div>
 
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>desenvolvimento de um site de roupas baseado em um arquivo PSD, desenvolvendo-o em HTML5 e CSS3.</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="copysite/">Acessar</a>
+
+                    </div>
+
+                </div>
+        
+            </section>  
+
+            <section>
+
                 <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>VD Negócios (Projeto Comercial)</h1>
+                    </div>
 
                     <div class="area_img">
 
                         <img src="assets/img/vdnegocios.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/bootstrap.png" title="BOOTSTRAP 4" alt="css">
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -101,22 +228,72 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
             <section>
 
-                <div class="area_title">
-                    <h1>Elevador (Projeto Pessoal)</h1>
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Pizzaria (Projeto Pessoal)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/pizza.png" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                        </div>
+
+                    </div>
+
                 </div>
 
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>Site desenvolvido focando no JS, foi uma primeira introdução ao funcionamento dessa tecnologia.</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="pizza/">Acessar</a>
+
+                    </div>
+
+                </div>
+        
+            </section>                       
+
+            <section>
+
                 <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Elevador (Projeto Pessoal)</h1>
+                    </div>
 
                     <div class="area_img">
 
                         <img src="assets/img/elevador.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -131,22 +308,32 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
             <section>
 
-                <div class="area_title">
-                    <h1>Mega-Portal (Projeto Pessoal)</h1>
-                </div>
-
                 <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Mega-Portal (Projeto Pessoal)</h1>
+                    </div>
 
                     <div class="area_img">
 
                         <img src="assets/img/portal.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -161,22 +348,32 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
             <section>
 
-                <div class="area_title">
-                    <h1>Slider (Projeto Pessoal)</h1>
-                </div>
-
                 <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Slider (Projeto Pessoal)</h1>
+                    </div>
 
                     <div class="area_img">
 
                         <img src="assets/img/slider.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -191,52 +388,32 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
             <section>
 
-                <div class="area_title">
-                    <h1>Loja de Roupa (Projeto Pessoal)</h1>
-                </div>
-
                 <div class="area_center">
 
-                    <div class="area_img">
-
-                        <img src="assets/img/copysite.png" alt="Thumbnail">
-
+                    <div class="area_title">
+                        <h1>Jogo dos círculos (Projeto Pessoal)</h1>
                     </div>
-
-                    <div class="area_desc">
-
-                        <p>Criação de um site de roupas baseado em um arquivo PSD, desenvolvendo-o em HTML5 e CSS3.</p>
-
-                    </div>
-
-                    <div class="link">
-
-                        <a href="copysite/">Acessar</a>
-
-                    </div>
-
-                </div>
-            
-            </section>
-
-            <section>
-
-                <div class="area_title">
-                    <h1>Jogo dos círculos (Projeto Pessoal)</h1>
-                </div>
-
-                <div class="area_center">
 
                     <div class="area_img">
 
                         <img src="assets/img/circle.png" alt="Thumbnail">
 
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="area_right">
 
                     <div class="area_desc">
 
@@ -251,10 +428,173 @@
                     </div>
 
                 </div>
-            
+        
             </section>
 
-        </main>
+            <section>
+
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Ricellas & Jhozzas (Projeto Pessoal)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/ricellas.png" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/html.png" title="HTML5" alt="html">
+                            <img src="assets/img/css.png" title="CSS3" alt="css">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">
+                            <img src="assets/img/bootstrap.png" title="BOOTSTRAP 4" alt="css">
+                            <img src="assets/img/php.png" title="PHP" alt="php">
+                            <img src="assets/img/mysql.png" alt="MYSQL">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>Cardápio online com área administrativa onde é possível a adição, edição e exclusão de categorias e produtos por parte do administrador, e escolha de itens, cadastro de endereço e delivery por WhatsApp por parte do cliente.</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="#" onclick="Nop(event)">Fora do ar ⏰</a>
+
+                    </div>
+
+                </div>
+        
+            </section>
+
+            <section>
+
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>MoveOut (Projeto Acadêmico)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/moveout.png" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">                            
+                            <img src="assets/img/react.png" title="REACT & REACT NATIVE" alt="REACT NATIVE"> 
+                            <img src="assets/img/firebase.png" style="width: 70px;" title="FIREBASE" alt="FIREBASE">
+                            <img src="assets/img/gapi.png" title="GOOGLE APIs" alt="GOOGLE APIs">                           
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>Aplicação mobile em React-Native, que tornará o processo de transportar mobília, eletrodomésticos, e diversos, mais rápido e efetivo. Essa ideia faz parte de um projeto acadêmico, onde 5 integrantes fazem parte do desenvolvimento.<br><br>(Deseja ser patrocinador? Entre em contato)</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="#" onclick="Nop(event)">App em refinamento</a>
+
+                    </div>
+
+                </div>
+        
+            </section>
+
+            <section>
+
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Telzir (Projeto Pessoal)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/telzir.png" style="width: 200px; border-radius: 30px;" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">                            
+                            <img src="assets/img/react.png" title="REACT & REACT NATIVE" alt="REACT NATIVE">                       
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>Desafio onde o objetivo era observar um tela de um arquivo.psd e desenvolver uma igual totalmente dinâmica, utilizando React-Native.</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="#" onclick="Nop(event)">Download indisponível</a>
+
+                    </div>
+
+                </div>
+        
+            </section>
+
+            <section>
+
+                <div class="area_center">
+
+                    <div class="area_title">
+                        <h1>Agenda Customizada (Projeto Comercial)</h1>
+                    </div>
+
+                    <div class="area_img">
+
+                        <img src="assets/img/agendajtc.png" style="width: 200px; border-radius: 30px;" alt="Thumbnail">
+
+                        <div class="lang">
+                            <img src="assets/img/js.png" title="JAVASCRIPT (ES6)" alt="js">                            
+                            <img src="assets/img/react.png" title="REACT & REACT NATIVE" alt="REACT NATIVE">
+                            <img src="assets/img/firebase.png" style="width: 70px;" title="FIREBASE" alt="FIREBASE">                     
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="area_right">
+
+                    <div class="area_desc">
+
+                        <p>Agenda totalmente personalizada para a empresa <a href="https://www.facebook.com/jatochegando" target="_blank" style="color: white;">Já to Chegando</a>, onde é possível cadastrar novas mudanças inserindo informações, e visualizar todas as mudanças agendadas, através do Firebase.</p>
+
+                    </div>
+
+                    <div class="link">
+
+                        <a href="#" onclick="Nop(event)">Download indisponível</a>
+
+                    </div>
+
+                </div>
+        
+            </section>
+
+        </div>
 
         <footer>
 
@@ -262,55 +602,42 @@
             
             <div class="social">
 
-                <a href="https://www.facebook.com/darksideprogrammer">
-                    <img src="assets/img/facebook.png" alt="Facebook">
+                <a href="mailto:darksideprogrammer06@gmail.com" target="_blank">
+                    <img title="E-mail" src="assets/img/email.png" alt="E-mail">
+                </a>
+
+                <a href="https://www.facebook.com/darksideprogrammer" target="_blank">
+                    <img title="Facebook" src="assets/img/facebook.png" alt="Facebook">
                 </a>
     
-                <a href="https://www.instagram.com/darkside_developer/">
-                    <img src="assets/img/instagram.png" alt="Instagram">
+                <a href="https://www.instagram.com/darkside_developer/" target="_blank">
+                    <img title="Instagram" src="assets/img/instagram.png" alt="Instagram">
                 </a>
     
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-arruda-99827a19b/">
-                    <img src="assets/img/linkedin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-arruda-99827a19b/" target="_blank">
+                    <img title="LinkedIn" src="assets/img/linkedin.png" alt="LinkedIn">
                 </a>
 
             </div>
 
-            <h5>Desenvolvido por Darkside Dev</h5>
+            <div class="credits">
 
-            <a class="top-link" href="" id="js-top">
+                <h5>Desenvolvido por &nbsp;</h5>
+
+                <img class="logo_footer" title="Darkside Developer & Programmer" src="assets/img/logo - DarkSide.png" alt="Darkside Programmer">
+
+            </div>
+
+            <a class="top-link" href="#intro" id="js-top">
                 <img src="assets/img/top.png" alt="Voltar ao topo">
             </a>
 
         </footer>
 
-        <script>
-
-            // Set a variable for our button element.
-            const scrollToTopButton = document.getElementById('js-top');
-
-            const scrollToTop = () => {
-                // Let's set a variable for the number of pixels we are from the top of the document.
-                const c = document.documentElement.scrollTop || document.body.scrollTop;
-                
-                // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
-                // We'll also animate that scroll with requestAnimationFrame:
-                // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
-                if (c > 0) {
-                    window.requestAnimationFrame(scrollToTop);
-                    // ScrollTo takes an x and a y coordinate.
-                    // Increase the '10' value to get a smoother/slower scroll!
-                    window.scrollTo(0, c - c / 40);
-                }
-            };
-
-            // When the button is clicked, run our ScrolltoTop function above!
-            scrollToTopButton.onclick = function(e) {
-                e.preventDefault();
-                scrollToTop();
-            }
-
-        </script>
+        <script src="assets/js/TweenLite.min.js"></script>
+        <script src="assets/js/EasePack.min.js"></script>
+        <script src="assets/js/demo.js"></script>  
+        <script src="assets/js/init.js"></script>
 
     </body>
 

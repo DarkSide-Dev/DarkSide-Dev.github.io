@@ -37,7 +37,7 @@ function SemiStart(){
 
     let main = document.querySelector("main");
 
-    main.style.height = screen.height - 117 + "px";
+    main.style.height = window.innerHeight - 117 + "px";
 
     let timer = setInterval(() => {
         
