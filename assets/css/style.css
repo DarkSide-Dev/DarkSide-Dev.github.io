@@ -411,12 +411,14 @@ footer img{
 
 .bio_image{
     flex: 1;
-    padding: 15px;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 45vw;
 }
 
-.bio_image figure{
+#bio_image{
     background-image: url("../img/me.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
