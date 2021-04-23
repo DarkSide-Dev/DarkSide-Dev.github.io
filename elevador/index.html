@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Elevador</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <audio src="assets/mp3/voz.mp3" autoplay></audio>
+        <div id="vozes"></div>
+        <div class="predio">
+            <div class="estrutura">
+
+                <div class="jan">
+                    
+                </div>
+
+                <div class="jan4" onclick="andar4()">
+                    <div class="jandir4"></div>
+                    <div class="janesq4"></div>
+                </div>
+
+                <div class="jan4" onclick="andar4()">
+                    <div class="jandir4"></div>
+                    <div class="janesq4"></div>
+                </div>
+
+                <div class="jan">
+                    
+                </div>
+
+                <div class="jan3" onclick="andar3()">
+                    <div class="jandir3"></div>
+                    <div class="janesq3"></div>
+                </div>
+
+                <div class="jan3" onclick="andar3()">
+                    <div class="jandir3"></div>
+                    <div class="janesq3"></div>
+                </div>
+
+                <div class="jan">
+                    
+                </div>
+    
+                <div class="jan2" onclick="andar2()">
+                    <div class="jandir2"></div>
+                    <div class="janesq2"></div>
+                </div>
+    
+                <div class="jan2" onclick="andar2()">
+                    <div class="jandir2"></div>
+                    <div class="janesq2"></div>
+                </div>
+    
+                <div class="jan">
+                    
+                </div>
+    
+                <div class="jan1" onclick="andar1()">
+                    <div class="jandir1"></div>
+                    <div class="janesq1"></div>
+                </div>
+
+                <div class="jan1" onclick="andar1()">
+                    <div class="jandir1"></div>
+                    <div class="janesq1"></div>
+                </div>
+
+
+                <div class="elevador" onclick="andar0()" style="top: 0px;">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="teclado">
+            <div class="botao1" onclick="andar1()">
+                1
+            </div>
+            <div class="botao2" onclick="andar2()">
+                2
+            </div>
+            <div class="botao3" onclick="andar3()">
+                3
+            </div>
+            <div class="botao4" onclick="andar4()">
+                4
+            </div>
+            <div class="botao5">
+                5
+            </div>
+            <div class="botao6">
+                6
+            </div>
+            <div class="botao7">
+                7
+            </div>
+            <div class="botao8">
+                8
+            </div>
+            <div class="botao9">
+                9
+            </div>
+            <div class="botaox">
+
+            </div>
+            <div class="botao0" onclick="andar0()">
+                0
+            </div>
+        </div>
+
+        <script src="assets/js/script.js"></script>
+        <script>
+            alert("Instruções (Desktop): Clique nos botões para guiar o elevador.");
+            alert("Instruções (Mobile): Clique nas janelas para guiar o elevador, ou clique no elevador para ir ao térreo.");
+        </script>
+    </body>
+</html>
