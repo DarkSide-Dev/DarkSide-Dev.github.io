@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Todo';
+  title = 'Lista de Tarefas';
+
+  lista: string[] = [];
+
+  tarefas = '';
+
+  adicionar(item: string){
+    if(item.trim() != ''){
+      this.lista.push(item);
+    }
+  }
+
 }

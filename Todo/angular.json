@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "e65af0b0-9b24-435d-a567-d8291203de69"
+    "analytics": "7637f405-f793-4c6e-a4bc-3e2d123bb7c4"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Todo",
+            "outputPath": "docs/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
