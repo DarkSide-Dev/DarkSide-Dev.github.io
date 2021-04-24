@@ -1,0 +1,116 @@
+body{
+    background-color: rgb(207, 207, 207);
+}
+
+progress{
+    appearance: none;
+    width: 300px;
+    height: 20px;
+    transition: all ease .6s;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -ms-transition: all ease .6s;
+    -o-transition: all ease .6s;
+}
+
+progress::-webkit-progress-bar{
+    background-color: #cdeefe;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all ease .6s;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -ms-transition: all ease .6s;
+    -o-transition: all ease .6s;
+}
+
+progress::-webkit-progress-value{
+    background-color: #007aff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all ease .6s;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -ms-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    position: relative;
+}
+
+span{
+    font-weight: bold;
+}
+
+.inProgress::-webkit-progress-value{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    transition: all ease .6s;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -ms-transition: all ease .6s;
+    -o-transition: all ease .6s;
+}
+
+main{
+    transition: all ease .7s;
+    -webkit-transition: all ease .7s;
+    -moz-transition: all ease .7s;
+    -ms-transition: all ease .7s;
+    -o-transition: all ease .7s;
+    position: relative;
+    background-color:  rgb(185, 184, 184);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1{
+    cursor: pointer;
+    z-index: 999;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+h1 span{
+    z-index: 999;
+}
+
+.bola{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+
+.red{
+    background-color: rgb(167, 33, 33);
+}
+
+.green{
+    background-color: royalblue;
+}

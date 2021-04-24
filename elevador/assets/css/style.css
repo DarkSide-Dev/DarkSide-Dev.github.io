@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+}
+
+.predio{
+    height: 100%;
+    width: 100%;
+    background-color: lightskyblue;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.estrutura{
+    background-color: lightslategrey;
+    width: 190px;
+    height: 600px;
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.elevador{
+    background-color: rgb(34, 34, 34);
+    width: 50px;
+    height: 100px;
+    position: relative;
+    transition: all 1.3s ease;
+    border-radius: 5px;
+    /* 85 */
+    /* 214 */
+    /* 342 */
+    /* 470 */
+}
+.jan, .jan1, .jan2, .jan3, .jan4{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jandir1, .jandir2, .jandir3, .jandir4, .jandir5, .jandir6, .jandir7, .jandir8{
+    background-color: maroon;
+    height: 100%;
+    width: 30%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+
+.janesq1, .janesq2, .janesq3, .janesq4, .janesq5, .janesq6, .janesq7, .janesq8{
+    background-color: maroon;
+    height: 100%;
+    width: 30%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: all .8s ease;
+}
+
+.teclado{
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: darkgray;
+    width: 27%;
+    height: 200px;
+    right: 0px;
+    position: absolute;
+    display: flex;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.botao1, .botao4, .botao7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32.8%;
+    background-color: grey;
+    height: 65px;
+    font-family: monospace;
+    font-size: 3.5em;
+    border: 1px solid black;
+    border-right: 0;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.botao2, .botao5, .botao8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32.8%;
+    background-color: grey;
+    height: 65px;
+    font-family: monospace;
+    font-size: 3.5em;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.botao3, .botao6, .botao9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32.9%;
+    background-color: grey;
+    height: 65px;
+    font-family: monospace;
+    font-size: 3.5em;
+    border: 1px solid black;
+    border-left: 0;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.botao0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32.9%;
+    background-color: grey;
+    height: 65px;
+    font-family: monospace;
+    font-size: 3.5em;
+    border: 1px solid black;
+    cursor: pointer;
+    border-top: 0;
+    transition: all .2s ease;
+}
+
+.botaox{
+    width: 33%;
+    height: 65px;
+}
+
+.botao1:hover, .botao2:hover, .botao3:hover, .botao4:hover, .botao5:hover, .botao6:hover, .botao7:hover, .botao8:hover, .botao9:hover, .botao0:hover{
+    background-color: lightgray;
+}
+
+.botao1:active, .botao2:active, .botao3:active, .botao4:active, .botao5:active, .botao6:active, .botao7:active, .botao8:active, .botao9:active, .botao0:active{
+    background-color: red;
+}
+
+.amarelo{
+    background-color: yellow !important;
+}
+
+@media screen and (max-width: 976px) {
+    
+    .teclado{
+        display: none;
+    }
+
+}
