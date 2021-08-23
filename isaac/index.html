@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="O game é inspirado em uma história bíblica e conta a saga de Isaac, um menino que vive trancado em um porão, para fugir de sua mãe. Como a imaginação de Isaac é das mais férteis, o garoto se esconde em todos os cantos do lugar e, no caminho, encontra as criaturas mais bizarras para enfrentar.">
+        <meta name="keywords" content="The Binding Of Isaac, Isaac, AfterBirth, Repentance, Indie Games">
+        <meta name="author" content="DarkSide Developer">
+        <link rel="stylesheet" href="./assets/css/index.css">
+        <title>The Binding Of Isaac Repentance</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" href="./assets/img/isaac.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <audio id="music" style="opacity: 0;">
+
+            <source src="./assets/music/sacrificial.mp3" type="audio/mp3">
+
+        </audio>
+
+        <div id="home" class="home back1">
+
+            <nav>
+
+                <ul>
+                    
+                    <li id="isaac"><img draggable="false" src="./assets/img/isaac.png" alt="Isaac"></li>
+                    <li onclick="window.location = '#home'">Home</li>
+                    <li onclick="window.location = '#bosses'">Chefes</li>
+                    <li onclick="window.location = '#about'">Sobre</li>
+
+                </ul>
+
+                <img draggable="false" id="sound" onclick="playsound()" src="./assets/img/sound2.png" alt="enable Music">
+
+            </nav>
+
+            <div class="home-main">
+
+                <h1>THE BINDING OF ISAAC</h1>
+                <h2>REPENTANCE</h2>
+
+            </div>
+
+            <svg style="position: absolute; bottom: 7px; left: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,192L0,128L288,128L288,256L576,256L576,288L864,288L864,192L1152,192L1152,224L1440,224L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z"></path></svg>
+
+            <svg style="position: absolute; bottom: 7px; right: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,192L0,128L288,128L288,256L576,256L576,288L864,288L864,192L1152,192L1152,224L1440,224L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z"></path></svg>
+
+            <svg style="position: absolute; bottom: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#121019" fill-opacity="1" d="M0,192L0,128L288,128L288,256L576,256L576,288L864,288L864,192L1152,192L1152,224L1440,224L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z"></path></svg>
+
+        </div>
+
+        <main>
+
+            <div class="main-img">
+                <img draggable="false" src="./assets/img/logo.png" alt="The Binding Of Isaac Repentance">
+            </div>
+
+            <div class="area-info">
+
+                <div class="sinopse">
+
+                    <div class="topimg">
+                        
+                        <img draggable="false" src="./assets/img/Red-Fire-Place-unscreen.gif" alt="Fire Pit">
+                        <img draggable="false" src="./assets/img/enemie.gif" alt="enemie">
+                        <img id="devilDoor" onclick="changeIsaac()" draggable="false" style="cursor: pointer;" src="./assets/img/Devil_Door.png" alt="Devil Door">
+                        <img draggable="false" src="./assets/img/enemie.gif" alt="enemie">
+                        <img draggable="false" src="./assets/img/Red-Fire-Place-unscreen.gif" alt="Fire Pit">
+
+                    </div>
+                
+                    <h2>Binding of Isaac</h2>
+    
+                    <p>O título e o enredo do jogo foram inspirados pela história bíblica do sacrifício de Isaque. Na história, Isaac foge para o porão de sua casa depois que sua mãe recebe uma mensagem de Deus exigindo a vida de seu filho como prova da sua fé, com ele devendo lutar contra vários monstros para sobreviver. Os jogadores controlam Isaac ou um dos outros seis personagens desbloqueáveis através de andares gerados aleatoriamente, derrotando inimigos em combate em tempo real e coletando itens e poderes a fim de derrotar os chefes e, eventualmente, a mãe de Isaac.</p>
+    
+                </div>
+
+                <div id="sinopse-side" class="sinopse-side back3">
+                    
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="container-bosses">
+
+            <svg style="position: absolute; top: 0; z-index: 8;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#121019" fill-opacity="1" d="M0,96L0,192L205.7,192L205.7,32L411.4,32L411.4,96L617.1,96L617.1,288L822.9,288L822.9,192L1028.6,192L1028.6,128L1234.3,128L1234.3,160L1440,160L1440,0L1234.3,0L1234.3,0L1028.6,0L1028.6,0L822.9,0L822.9,0L617.1,0L617.1,0L411.4,0L411.4,0L205.7,0L205.7,0L0,0L0,0Z"></path></svg>
+            <svg style="position: absolute; top: 10px; right: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,96L0,192L205.7,192L205.7,32L411.4,32L411.4,96L617.1,96L617.1,288L822.9,288L822.9,192L1028.6,192L1028.6,128L1234.3,128L1234.3,160L1440,160L1440,0L1234.3,0L1234.3,0L1028.6,0L1028.6,0L822.9,0L822.9,0L617.1,0L617.1,0L411.4,0L411.4,0L205.7,0L205.7,0L0,0L0,0Z"></path></svg>
+            <svg style="position: absolute; top: 10px; left: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,96L0,192L205.7,192L205.7,32L411.4,32L411.4,96L617.1,96L617.1,288L822.9,288L822.9,192L1028.6,192L1028.6,128L1234.3,128L1234.3,160L1440,160L1440,0L1234.3,0L1234.3,0L1028.6,0L1028.6,0L822.9,0L822.9,0L617.1,0L617.1,0L411.4,0L411.4,0L205.7,0L205.7,0L0,0L0,0Z"></path></svg>
+
+            <div class="area-bosses">
+
+                <div class="area-bosses-title">
+
+                    <h2 id="bosses">CHEFES</h2>
+
+                </div>
+
+                <div class="boss-show">
+
+                    <div class="boss-selection">
+                        
+                    </div>
+
+                    <div class="boss-info">
+
+                        <div class="boss--name-area">
+                            <h2 id="boss-name">Dingle</h2>
+                        </div>
+
+                        <div class="boss--img-area">
+                            <img draggable="false" id="boss-img" src="./assets/img/dingle-p.png" alt="Dingle">
+                        </div>
+
+                        <div class="life-text">
+                            Pontos de Vida
+                        </div>
+
+                        <div class="boss--life-points">
+                            <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                            <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                            <img draggable="false" src="./assets/img/half-heart.png" alt="Half Heart">
+
+                            <p id="boss-life-points">1500</p>
+
+                            <img draggable="false" src="./assets/img/half-heart.png" alt="Half Heart">
+                            <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                            <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                        </div>
+
+                    </div>
+
+                    <div id="modal" class="boss-show-modal" style="display: none;">
+
+                        <div class="boss-info-modal">
+    
+                            <div class="boss--name-area-modal">
+                                <img onclick="closeModal()" src="./assets/img/close.png" alt="Fechar"><h2 id="boss-name-modal">Dingle</h2>
+                            </div>
+    
+                            <div class="boss--img-area-modal">
+                                <img draggable="false" id="boss-img-modal" src="./assets/img/dingle-p.png" alt="Dingle">
+                            </div>
+    
+                            <div class="life-text-modal">
+                                Pontos de Vida
+                            </div>
+    
+                            <div class="boss--life-points-modal">
+                                <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                                <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                                <img draggable="false" src="./assets/img/half-heart.png" alt="Half Heart">
+    
+                                <p id="boss-life-points-modal">1500</p>
+    
+                                <img draggable="false" src="./assets/img/half-heart.png" alt="Half Heart">
+                                <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                                <img draggable="false" src="./assets/img/full-heart.png" alt="Full Heart">
+                            </div>
+    
+                        </div>
+    
+                    </div>
+
+                </div>                
+
+            </div>
+
+        </div>
+
+        <div class="about" id="about">
+
+            <svg style="position: absolute; z-index: 9; top: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#333333" fill-opacity="1" d="M0,192L0,224L288,224L288,32L576,32L576,96L864,96L864,224L1152,224L1152,128L1440,128L1440,0L1152,0L1152,0L864,0L864,0L576,0L576,0L288,0L288,0L0,0L0,0Z"></path></svg>
+            <svg style="position: absolute; top: 15px; right: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,192L0,224L288,224L288,32L576,32L576,96L864,96L864,224L1152,224L1152,128L1440,128L1440,0L1152,0L1152,0L864,0L864,0L576,0L576,0L288,0L288,0L0,0L0,0Z"></path></svg>
+            <svg style="position: absolute; top: 15px; left: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ad0600" fill-opacity="1" d="M0,192L0,224L288,224L288,32L576,32L576,96L864,96L864,224L1152,224L1152,128L1440,128L1440,0L1152,0L1152,0L864,0L864,0L576,0L576,0L288,0L288,0L0,0L0,0Z"></path></svg>            
+
+            <div class="area-about">
+
+                <div class="about-title">
+                    <h2>SOBRE</h2>
+                </div>
+
+                <div class="about-text">
+
+                    <div class="about-text-p">
+                        <p>
+                            Este site foi desenvolvido usando as tecnologias HTML5, CSS3, JAVASCRIPT e consumo de informações JSON. Esta página tem como objetivo por em prática os assuntos aprendidos no curso técnico do Instituto PROA, com um toque especial pessoal meu.
+                        </p>
+                    </div>
+
+                    <div class="about-text-img">
+                        <img draggable="false" src="./assets/img/banner.jpg" alt="Banner Isaac">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            Desenvolvido com ❤ por DarkSide Dev.
+        </footer>
+        
+        <script src="./assets/js/index.js"></script>
+    </body>
+
+</html>
