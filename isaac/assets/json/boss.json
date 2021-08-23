@@ -1,0 +1,110 @@
+{
+    "boss": [
+      {
+        "id": 0,
+        "name": "Dingle",
+        "wallpaper": "./assets/img/dingle-w.png",
+        "photo": "./assets/img/dingle-p.png",
+        "baseHp": 300
+      },
+      {
+        "id": 1,
+        "name": "The Duke of Flies",
+        "wallpaper": "./assets/img/duke-w.png",
+        "photo": "./assets/img/duke-p.png",
+        "baseHp": 110
+      },
+      {
+        "id": 2,
+        "name": "Gemini",
+        "wallpaper": "./assets/img/gemini-w.png",
+        "photo": "./assets/img/gemini-p.png",
+        "baseHp": 110
+      },
+      {
+        "id": 3,
+        "name": "Blighted Ovum",
+        "wallpaper": "./assets/img/blighted-ovum-w.png",
+        "photo": "./assets/img/blighted-ovum-p.png",
+        "baseHp": 140
+      },
+      {
+        "id": 4,
+        "name": "Dark One",
+        "wallpaper": "./assets/img/dark-one-w.png",
+        "photo": "./assets/img/dark-one-p.png",
+        "baseHp": 400
+      },
+      {
+        "id": 5,
+        "name": "The Adversary",
+        "wallpaper": "./assets/img/adversary-w.png",
+        "photo": "./assets/img/adversary-p.png",
+        "baseHp": 520
+      },
+      {
+        "id": 6,
+        "name": "It Lives!",
+        "wallpaper": "./assets/img/it-lives-w.png",
+        "photo": "./assets/img/it-lives-p.png",
+        "baseHp": 950
+      },
+      {
+        "id": 7,
+        "name": "Satan",
+        "wallpaper": "./assets/img/satan-w.png",
+        "photo": "./assets/img/satan-p.png",
+        "baseHp": 1200
+      },
+      {
+        "id": 8,
+        "name": "Mega Satan",
+        "wallpaper": "./assets/img/mega-satan-w.png",
+        "photo": "./assets/img/mega-satan-p.png",
+        "baseHp": 5000
+      },
+      {
+        "id": 9,
+        "name": "The Bloat",
+        "wallpaper": "./assets/img/bloat-w.png",
+        "photo": "./assets/img/bloat-p.png",
+        "baseHp": 450
+      },
+      {
+        "id": 10,
+        "name": "Delirium",
+        "wallpaper": "./assets/img/delirium-w.png",
+        "photo": "./assets/img/delirium-p.png",
+        "baseHp": 10000
+      },
+      {
+        "id": 11,
+        "name": "Baby Plum",
+        "wallpaper": "./assets/img/baby-plum-w.png",
+        "photo": "./assets/img/baby-plum-p.png",
+        "baseHp": 234
+      },
+      {
+        "id": 12,
+        "name": "Steven",
+        "wallpaper": "./assets/img/steven-w.png",
+        "photo": "./assets/img/steven-p.png",
+        "baseHp": 280
+      },
+      {
+        "id": 13,
+        "name": "C.H.A.D",
+        "wallpaper": "./assets/img/chad-w.png",
+        "photo": "./assets/img/chad-p.png",
+        "baseHp": 350
+      },
+      {
+        "id": 14,
+        "name": "Triachnid",
+        "wallpaper": "./assets/img/triachnid-w.png",
+        "photo": "./assets/img/triachnid-p.png",
+        "baseHp": 500
+      }
+      
+    ]
+}
