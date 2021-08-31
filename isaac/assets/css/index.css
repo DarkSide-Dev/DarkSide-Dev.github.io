@@ -736,6 +736,11 @@ footer{
         height: 80px;
     }
 
+    .home::after{
+        background-attachment: scroll;
+    }
+    
+
     .sinopse .topimg{
         top: -80px;
     }
