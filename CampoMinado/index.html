@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campo Minado</title>
+        <link rel="stylesheet" href="./assets/css/index.css">
+    </head>
+
+    <body>
+        
+        <main>
+
+            <div class="score">
+                <div id="time-numbers" class="time-numbers">0</div>
+                <div id="bombs-number" class="bombs-number"></div>
+            </div>
+
+            <div id="container" class="container">                
+            
+
+            </div>
+
+            <div id="lose" class="modal-lose hide">
+                <h2>Infelizmente você clicou em uma bomba 💣😢</h2>
+                <button onclick="lose();iniciar();">Tentar de novo</button>
+            </div>
+
+            <div id="win" class="modal-lose hide">
+                <h2>Parabéns!! Você conseguiu achar todas as bombas 💣😎</h2>
+                <button onclick="win();iniciar();">Jogar novamente</button>
+            </div>
+
+        </main>
+
+
+        <script src="./assets/js/index.js"></script>
+    </body>
+
+</html>
