@@ -258,7 +258,7 @@ function expandir(){
                         document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";
                         document.getElementById(`bomb${index+11}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
     
@@ -374,7 +374,7 @@ function expandir(){
                         document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";
                         document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
     
@@ -432,7 +432,7 @@ function expandir(){
                         document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";
                         document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index-1] = 1;
     
@@ -508,7 +508,7 @@ function expandir(){
                         document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index}`).innerHTML = " ";  
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";  
 
                         tabuleiroShow[index+1] = 1;
     
@@ -589,7 +589,7 @@ function expandir(){
                         document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index-1] = 1;
     
@@ -669,7 +669,7 @@ function expandir(){
                         document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
     
@@ -751,7 +751,7 @@ function expandir(){
                         document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";  
                         document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb"; 
-                        document.getElementById(`bomb${index}`).innerHTML = " "; 
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;"; 
 
                         tabuleiroShow[index+1] = 1;
     
@@ -860,7 +860,7 @@ function expandir(){
                         document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";
                         document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";
 
-                        document.getElementById(`bomb${index}`).innerHTML = " ";
+                        document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index-11] = 1;
                         tabuleiroShow[index-10] = 1;
