@@ -95,6 +95,8 @@ function flag(index){
         document.getElementById(`bomb${index}`).innerHTML = `<img src="./assets/img/flag.png" draggable="false" alt="Flag">`;
         tabuleiroShow[index] = 2;
         flags++;
+        let audio = document.getElementById("put-flag");
+        audio.play();
 
     }
     else if(tabuleiroShow[index] == 2){
@@ -102,6 +104,8 @@ function flag(index){
         document.getElementById(`bomb${index}`).innerHTML = `.`;
         tabuleiroShow[index] = 0;
         flags--;
+        let audio = document.getElementById("put-flag");
+        audio.play();
 
     }
     else if(document.getElementById(`bomb${index}`).innerHTML != `&nbsp;`){
@@ -137,7 +141,10 @@ function verificar(index){
 
     if(tabuleiroShow[index] == 0){
 
-        if(tabuleiro[index]){
+        if(tabuleiro[index] == 1){
+
+            let audio = document.getElementById("put-bomb");
+            audio.play();
          
             tabuleiroShow[index] = 1;
             if(seconds == 0){
