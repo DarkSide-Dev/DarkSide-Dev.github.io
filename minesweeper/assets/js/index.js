@@ -104,8 +104,11 @@ function flag(index){
         flags--;
 
     }
+    else if(document.getElementById(`bomb${index}`).innerHTML != `&nbsp;`){
+        
+    }
     else{
-        document.getElementById(`bomb${index}`).innerHTML = `&nbsp;`;
+        document.getElementById(`bomb${index}`).innerHTML = `&nbsp`;
     }
 
     document.getElementById("bombs-number").innerHTML = quant_Bombas-flags;
