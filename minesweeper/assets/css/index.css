@@ -143,9 +143,10 @@ main{
 .modal-win{
     position: absolute;
     width: 400px;
-    height: 400px;
-    max-height: auto;
+    min-height: 400px;
     max-width: 90%;
+    padding: 10px 0;
+    max-height: auto;
     background-color: #2da241;
     display: flex;
     align-items: center;
