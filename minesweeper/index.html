@@ -9,15 +9,61 @@
     </head>
 
     <body>
+
+        <audio id="win-music" style="opacity: 0;">
+
+            <source src="./assets/audio/win.mp3" type="audio/mp3">
+
+        </audio>
+
+        <audio id="lose-music" style="opacity: 0;">
+
+            <source src="./assets/audio/lose.mp3" type="audio/mp3">
+
+        </audio>
+
+        <img src="./assets/img/menu.png" onclick="toggleMenu()" id="menu" alt="Menu">
+
+        <aside id="aside" class="hiddenMenu">
+
+            <img src="./assets/img/close.png" onclick="toggleMenu()" id="menu2" alt="Close Menu">
+
+            <div class="difficult">
+
+                <span>Escolha a dificuldade</span>
+                <div class="choice">
+                    <label id="easylabel" onclick="changeBombs(20)" class="selected-e" for="easy">Fácil</label>
+                    <input hidden type="radio" name="difficult" id="easy">
+
+                    <label id="mediumlabel" onclick="changeBombs(30)" class="unselected" for="medium">Médio</label>
+                    <input hidden type="radio" name="difficult" id="medium">
+
+                    <label id="hardlabel" onclick="changeBombs(50)" class="unselected" for="hard">Difícil</label>
+                    <input hidden type="radio" name="difficult" id="hard">
+                </div>
+
+            </div>
+
+            <span>Ou</span>
+
+            <div class="set-bombs">
+                <span>Escolha a quantidade de bombas</span>
+                <input oninput="changeBombs(this.value)" type="range" id="bombQuant" step="1" value="20" min="20" max="99">
+                <span id="totalbombs">20</span>
+            </div>
+
+            <button id="btn-change" onclick="change()">Aplicar</button>
+
+        </aside>
         
-        <main>
+        <main ondblclick="return false;">
 
             <div class="score">
                 <div id="time-numbers" class="time-numbers">0</div>
-                <div id="bombs-number" class="bombs-number"></div>
+                <div id="bombs-number" class="bombs-number"></div>                
             </div>
 
-            <div id="container" class="container">                
+            <div ondblclick="return false;" id="container" class="container">                
             
 
             </div>
@@ -27,7 +73,7 @@
                 <button onclick="lose();iniciar();">Tentar de novo</button>
             </div>
 
-            <div id="win" class="modal-lose hide">
+            <div id="win" class="modal-win hide">
                 <h2>Parabéns!! Você conseguiu achar todas as bombas 💣😎</h2>
                 <button onclick="win();iniciar();">Jogar novamente</button>
             </div>

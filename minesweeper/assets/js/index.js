@@ -26,16 +26,24 @@ function definirBombas(){
 
         for(i = 0; i < quant_tabuleiro; i++){
 
-            if(Math.floor((Math.random() * 100) + 1) % 3 == 0){
-    
-                tabuleiro.push(0);
-                bombas++;
-    
+            if(tabuleiro.length == 100){
+
+                if(Math.floor((Math.random() * 100) + 1) % 2 == 0 && tabuleiro[i] != 0){
+                    tabuleiro[i] = 0;
+                    bombas++;
+                }
+
             }
             else{
-    
-                tabuleiro.push(1);
-    
+
+                if(Math.floor((Math.random() * 100) + 1) % 3 == 0){
+                    tabuleiro.push(0);
+                    bombas++;
+                }
+                else{
+                    tabuleiro.push(1);
+                }
+
             }
 
             tabuleiroShow.push(0);
@@ -97,7 +105,7 @@ function flag(index){
 
     }
     else{
-
+        document.getElementById(`bomb${index}`).innerHTML = `&nbsp;`;
     }
 
     document.getElementById("bombs-number").innerHTML = quant_Bombas-flags;
@@ -131,6 +139,8 @@ function verificar(index){
             tabuleiroShow[index] = 1;
             if(seconds == 0){
 
+                seconds++;
+
                 timer = setInterval(() => {
                     
                     seconds++;
@@ -140,6 +150,8 @@ function verificar(index){
     
             }
 
+            document.getElementById(`bomb${index}`).innerHTML = `&nbsp;`;
+
             expandir();
 
         }
@@ -147,14 +159,28 @@ function verificar(index){
 
         }
         else{
-            clearInterval(timer);
 
-            lose(false);
+            bombAnimation(index);
+
+            tabuleiroShow = [];
+            tabuleiro = [];
+
+            setTimeout(() => {
+                let audio = document.getElementById("lose-music");
+                audio.play();
+                lose();
+            }, 2000);
         }
 
         countFlags();
 
     }
+
+}
+
+function bombAnimation(index){
+
+    document.getElementById(`bomb${index}`).innerHTML = `<img src="./assets/img/bomb.gif" alt="Bomba">`;
 
 }
 
@@ -173,7 +199,7 @@ function lose(){
     tabuleiroShow = [];
 
     clearInterval(timer);
-    timer = 0;
+    timer = null;
 
 }
 
@@ -228,7 +254,7 @@ function expandir(){
 
                     if(bombas > 0){
                                                 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";
 
                         switch(bombas){
 
@@ -254,10 +280,10 @@ function expandir(){
                     }
                     else{
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#9e9e9e";  
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
@@ -287,7 +313,7 @@ function expandir(){
 
                     if(bombas > 0){
                                                 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";
 
                         switch(bombas){
 
@@ -313,10 +339,10 @@ function expandir(){
                     }
                     else{
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";  
 
                         tabuleiroShow[index-1] = 1;
     
@@ -346,7 +372,7 @@ function expandir(){
                     if(bombas){
                         
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";   
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";   
 
                         switch(bombas){
 
@@ -370,10 +396,10 @@ function expandir(){
                     }
                     else{
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
@@ -404,7 +430,7 @@ function expandir(){
                     if(bombas){
                         
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";   
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";   
 
                         switch(bombas){
 
@@ -428,10 +454,10 @@ function expandir(){
                     }
                     else{
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#9e9e9e";
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index-1] = 1;
@@ -497,17 +523,17 @@ function expandir(){
                         }
 
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
                     }
                     else{      
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";  
 
                         tabuleiroShow[index+1] = 1;
@@ -577,18 +603,18 @@ function expandir(){
                         }
 
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
                     }
                     else{
                         
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#9e9e9e";  
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index-1] = 1;
@@ -658,17 +684,17 @@ function expandir(){
                         }
 
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
                     }
                     else{
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e";  
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
                         tabuleiroShow[index+1] = 1;
@@ -738,19 +764,19 @@ function expandir(){
                         }
 
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
                     }
                     else{
                         
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";          
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";          
 
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";  
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb"; 
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#9e9e9e";  
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e"; 
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;"; 
 
                         tabuleiroShow[index+1] = 1;
@@ -844,21 +870,21 @@ function expandir(){
                         }
 
                         document.getElementById(`bomb${index}`).innerHTML = bombas;
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb";  
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e";  
 
                     }
                     else{
                         
-                        document.getElementById(`bomb${index}`).style.backgroundColor = "#ebebeb"; 
+                        document.getElementById(`bomb${index}`).style.backgroundColor = "#9e9e9e"; 
 
-                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#ebebeb";
-                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#ebebeb";
+                        document.getElementById(`bomb${index-11}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index-10}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index-9}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+1}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+11}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+10}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index+9}`).style.backgroundColor = "#9e9e9e";
+                        document.getElementById(`bomb${index-1}`).style.backgroundColor = "#9e9e9e";
 
                         document.getElementById(`bomb${index}`).innerHTML = "&nbsp;";
 
@@ -883,10 +909,104 @@ function expandir(){
 
     }
 
-    if(counter+1 == quant_tabuleiro - quant_Bombas){
+    if(counter == quant_tabuleiro - quant_Bombas){
 
+        let audio = document.getElementById("win-music");
+        audio.play();
         win();
 
     }
+
+}
+
+function changeBombs(bombs){
+
+    document.getElementById("totalbombs").innerHTML = bombs;
+
+    document.getElementById("bombQuant").value = bombs;
+
+    if(bombs == 20){
+
+        document.getElementById("easylabel").classList.add("selected-e");
+
+        document.getElementById("easylabel").classList.remove("unselected");
+
+        document.getElementById("mediumlabel").classList.remove("selected-m");
+
+        document.getElementById("mediumlabel").classList.add("unselected");
+
+        document.getElementById("hardlabel").classList.remove("selected-h");
+
+        document.getElementById("hardlabel").classList.add("unselected");
+
+    }
+    else if(bombs == 30){
+
+        document.getElementById("easylabel").classList.remove("selected-e");
+
+        document.getElementById("easylabel").classList.add("unselected");
+
+        document.getElementById("mediumlabel").classList.add("selected-m");
+
+        document.getElementById("mediumlabel").classList.remove("unselected");
+
+        document.getElementById("hardlabel").classList.remove("selected-h");
+
+        document.getElementById("hardlabel").classList.add("unselected");
+
+    }
+    else if(bombs == 50){
+
+        document.getElementById("easylabel").classList.remove("selected-e");
+
+        document.getElementById("easylabel").classList.add("unselected");
+
+        document.getElementById("mediumlabel").classList.remove("selected-m");
+
+        document.getElementById("mediumlabel").classList.add("unselected");
+
+        document.getElementById("hardlabel").classList.add("selected-h");
+
+        document.getElementById("hardlabel").classList.remove("unselected");
+
+    }
+    else{
+        document.getElementById("easylabel").classList.remove("selected-e");
+
+        document.getElementById("easylabel").classList.add("unselected");
+
+        document.getElementById("mediumlabel").classList.remove("selected-m");
+
+        document.getElementById("mediumlabel").classList.add("unselected");
+
+        document.getElementById("hardlabel").classList.remove("selected-h");
+
+        document.getElementById("hardlabel").classList.add("unselected");
+    }
+
+}
+
+function toggleMenu(){
+
+    if(document.getElementById("aside").classList.contains("showMenu")){
+        document.getElementById("aside").classList.add("hiddenMenu");
+        document.getElementById("aside").classList.remove("showMenu");
+    }
+    else{
+        document.getElementById("aside").classList.remove("hiddenMenu");
+        document.getElementById("aside").classList.add("showMenu");
+    }
+
+}
+
+function change(){
+
+    let x = +document.getElementById("totalbombs").innerHTML;
+
+    quant_Bombas = x;
+
+    toggleMenu();
+
+    iniciar();
 
 }

@@ -88,6 +88,7 @@ main{
 .modal-lose{
     position: absolute;
     width: 400px;
+    max-width: 90%;
     height: 400px;
     background-color: firebrick;
     display: flex;
@@ -114,7 +115,7 @@ main{
     line-height: 65px;
 }
 
-.modal-lose button{
+.modal-lose button, .modal-win button{
     border: 0;
     outline: none;
     background-color: goldenrod;
@@ -134,7 +135,7 @@ main{
     -o-transition: all ease .2s;
 }
 
-.modal-lose button:hover{
+.modal-lose button:hover, .modal-win button:hover{
     border-style: inset;
     cursor: pointer;
 }
@@ -143,6 +144,7 @@ main{
     position: absolute;
     width: 400px;
     height: 400px;
+    max-width: 90%;
     background-color: #2da241;
     display: flex;
     align-items: center;
@@ -176,6 +178,151 @@ main{
 .show{
     opacity: 1;
     z-index: 1;
+}
+
+#menu{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#menu2{
+    position: absolute;
+    right: -50px;
+    cursor: pointer;
+}
+
+.hiddenMenu{
+    left: -150%;
+}
+
+.showMenu{
+    left: 0;
+}
+
+aside{
+    position: absolute;
+    background-color: #d3d3d3;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    z-index: 3;
+    border-right: 3px solid black;
+}
+
+.difficult{
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 25px;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+aside span{
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.choice{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.choice label{
+    cursor: pointer;
+    border: 2px solid #4b4a4a;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.set-bombs{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.set-bombs span{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.set-bombs input{
+    /*height: 15px;
+    */-webkit-appearance: none;
+    background: #444;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+
+.set-bombs input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: orangered;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px orangered;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+
+#btn-change{
+    border: 2px solid black;
+    outline: none;
+    font-size: 20px;
+    font-family: monospace;
+    padding: 10px;
+    background-color: #31d64c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.unselected{
+    background-color: gold;
+}
+
+.selected-e{ 
+    background-color: #31d64c;
+}
+
+.selected-m{ 
+    background-color: rgb(253, 123, 1);
+}
+
+.selected-h{ 
+    background-color: orangered;
 }
 
 @media screen and (max-width: 519px) {
