@@ -9,11 +9,14 @@ let timeCounter = 0;
  
 var initialX = null;
 var initialY = null;
+
+function foo(){
+  window.scrollTo(0,document.body.scrollHeight);
+}
  
 function startTouch(e) {
   initialX = e.touches[0].clientX;
   initialY = e.touches[0].clientY;
-  e.preventDefault();
 };
  
 function moveTouch(e) {
@@ -244,7 +247,7 @@ function start(){
 
     document.getElementById("controls").style.display = "none";
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.addEventListener("scroll", foo, false);
 
     document.getElementById(`campo0`).classList.add("head-snake");
     snake.push(0);
@@ -276,7 +279,7 @@ function start(){
 }
 
 function move(){
-
+  window.scrollTo(0,document.body.scrollHeight);
   try{
     for(let i = snake.length-1; i >= 0; i--){
     
@@ -349,7 +352,9 @@ function move(){
 
 }
 
-function losing(){  
+function losing(){
+
+  window.removeEventListener("scroll", foo, false);
 
   if(document.getElementById("modal").classList.contains("hidden")){
     
