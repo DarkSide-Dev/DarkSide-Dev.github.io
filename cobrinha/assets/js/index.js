@@ -13,6 +13,7 @@ var initialY = null;
 function startTouch(e) {
   initialX = e.touches[0].clientX;
   initialY = e.touches[0].clientY;
+  e.preventDefault();
 };
  
 function moveTouch(e) {
@@ -81,7 +82,7 @@ function getDirection(e){
 
   switch(e.key.toLowerCase()){
 
-    case 'w':
+    case 'arrowup':
       
       if(direction != 8){
 
@@ -91,7 +92,7 @@ function getDirection(e){
 
     break
 
-    case 'a':
+    case 'arrowleft':
 
       if(direction != 1){
 
@@ -101,7 +102,7 @@ function getDirection(e){
 
     break
 
-    case 's':
+    case 'arrowdown':
       
       if(direction != -8){
 
@@ -111,7 +112,7 @@ function getDirection(e){
 
     break
 
-    case 'd':
+    case 'arrowright':
       
       if(direction != -1){
 
@@ -241,17 +242,13 @@ function start(){
 
   if(!snake[0]){
 
-    window.scrollTo(0,document.body.scrollHeight);
+    document.getElementById("controls").style.display = "none";
 
-    window.onscroll = function(){
-  
-      window.scrollTo(0,document.body.scrollHeight);
-      
-    };
+    window.scrollTo(0,document.body.scrollHeight);
 
     document.getElementById(`campo0`).classList.add("head-snake");
     snake.push(0);
-    timer = setInterval(move, 250);
+    timer = setInterval(move, 200);
     timeCounter = 0;
 
     document.getElementById("tabuleiro").addEventListener("touchstart", startTouch, false);
@@ -267,6 +264,12 @@ function start(){
       document.getElementById("time-score").innerHTML = `<img draggable="false" src="./assets/img/clock.png" alt="Tempo"> ${timeCounter}`;
 
     }, 1000);    
+
+  }
+  if(!document.getElementById("modal").classList.contains("hidden")){
+    
+    losing();
+    start();
 
   }
 
@@ -346,13 +349,7 @@ function move(){
 
 }
 
-function losing(){
-
-  window.onscroll=function(){
-  
-    
-    
-  };
+function losing(){  
 
   if(document.getElementById("modal").classList.contains("hidden")){
     
@@ -363,17 +360,20 @@ function losing(){
 
     document.getElementById("modal").classList.remove("hidden");
     document.getElementById("modal").classList.add("show");
+    document.getElementById("tabuleiro").removeEventListener("touchstart", moveTouch, false);
+    document.getElementById("tabuleiro").removeEventListener("touchmove", moveTouch, false);
 
   }
   else{
 
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("modal").classList.remove("show");
-    document.getElementById("tabuleiro").removeEventListener("touchstart", moveTouch, false);
-    document.getElementById("tabuleiro").removeEventListener("touchmove", moveTouch, false);
     direction = 8;
     snake = [];
     preencher();
+
+    window.scrollTo(0,0);
+  
     fruitCounter = 0;
     document.getElementById("fruit-score").innerHTML = `<img draggable="false" src="./assets/img/fruta.png" alt="Fruta"> ${fruitCounter}`;
 

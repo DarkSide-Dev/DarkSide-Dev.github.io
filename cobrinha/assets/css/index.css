@@ -67,6 +67,18 @@ body{
     background-color: rgb(75, 3, 3);
 }
 
+#controls{
+    position: absolute;
+    width: 150px;
+    background-color: #777;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
 main{
     width: 560px;
     max-width: 100vw;
