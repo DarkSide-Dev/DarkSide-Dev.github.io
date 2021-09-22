@@ -277,6 +277,9 @@ function start(){
 
     document.getElementById("controls").style.display = "none";
 
+    let audio = document.getElementById("music");
+    audio.play();
+
     window.scrollTo(0,document.body.scrollHeight);
 
     document.getElementById(`campo0`).classList.add("head-snake");
@@ -361,9 +364,23 @@ function move(){
         let checker1;
         let checker2;
 
+        if(document.getElementById(`campo${snake[0]+direction}`).classList.contains("body-snake") && snake.length > 1){
+          
+          if(document.getElementById(`campo${snake[1]}`).classList.contains("body-snake") && snake[0]+direction == snake[1]){
+            direction = direction*-1;
+          }
+          else{
+            losing();
+          }
+  
+        }
+
         if(findFood()){          
   
           generateFood();
+
+          let audio = document.getElementById("chomp");
+          audio.play();
           
           fruitCounter++;
   
@@ -447,12 +464,6 @@ function move(){
           losing();
 
         }        
-  
-        if(document.getElementById(`campo${snake[0]}`).classList.contains("head-snake") && document.getElementById(`campo${snake[0]}`).classList.contains("body-snake") && snake.length > 2){
-          
-          losing();
-  
-        }
   
       }
       else if(i == snake.length-1){
@@ -585,6 +596,12 @@ function losing(){
     document.getElementById("modal").classList.add("show");
     document.getElementById("tabuleiro").removeEventListener("touchstart", moveTouch, false);
     document.getElementById("tabuleiro").removeEventListener("touchmove", moveTouch, false);
+
+    let audio = document.getElementById("music");
+    audio.pause();
+
+    let audio2 = document.getElementById("lose-music");
+    audio2.play();
 
   }
   else{
