@@ -285,7 +285,7 @@ function start(){
     document.getElementById(`campo0`).setAttribute("go", 8);
     document.getElementById(`campo0`).setAttribute("from", 1);
     snake.push(0);
-    timer = setInterval(move, 200);
+    timer = setInterval(move, 300);
     timeCounter = 0;
 
     document.getElementById("tabuleiro").addEventListener("touchstart", startTouch, false);
