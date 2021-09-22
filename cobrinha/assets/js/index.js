@@ -83,7 +83,7 @@ function moveTouch(e) {
   initialX = null;
   initialY = null;
    
-  e.preventDefault();
+  // e.preventDefault();
 
 };
 
