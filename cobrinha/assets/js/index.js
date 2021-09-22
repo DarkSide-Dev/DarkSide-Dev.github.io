@@ -23,7 +23,6 @@ var initialY = null;
 function startTouch(e) {
   initialX = e.touches[0].clientX;
   initialY = e.touches[0].clientY;
-  e.preventDefault();
 };
  
 function moveTouch(e) {
