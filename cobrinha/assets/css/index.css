@@ -91,16 +91,36 @@ main{
 }
 
 .block{
-    border: 1px solid #075507;
+    /* border: 1px solid #075507; */
     box-sizing: border-box;
     flex: 1;
     display: flex;
+    overflow: hidden;
+}
+
+.right{
+    justify-content: flex-end;
+}
+
+.left{
+    justify-content: flex-start;
+}
+
+.center{
     justify-content: center;
     align-items: center;
 }
 
+.bottom{
+    align-items: flex-end;
+}
+
+.top{
+    align-items: flex-start;
+}
+
 .block img{
-    max-height: 100%;
+    min-height: auto;
 }
 
 .dark{
@@ -122,11 +142,11 @@ main{
 }
 
 .body-snake{
-    background-color: orangered !important;
+    /* background-color: orangered !important; */
 }
 
 .head-snake{
-    background-color: rgb(131, 43, 11) !important;
+    /* background-color: rgb(131, 43, 11) !important; */
 }
 
 .modal-lose{
