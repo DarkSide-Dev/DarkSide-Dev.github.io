@@ -36,7 +36,17 @@ function definirBombas(){
             }
             else{
 
-                if(Math.floor((Math.random() * 100) + 1) % 3 == 0){
+                if(quant_Bombas == 99){
+                    
+                    if(Math.floor((Math.random() * 100) + 1) % 7 == 0){
+                        tabuleiro.push(0);
+                        bombas++;
+                    }
+                    else{
+                        tabuleiro.push(1);
+                    }                    
+                }
+                else if(Math.floor((Math.random() * 100) + 1) % 3 == 0){
                     tabuleiro.push(0);
                     bombas++;
                 }
